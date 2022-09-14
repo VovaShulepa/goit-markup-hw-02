@@ -6,9 +6,12 @@
    --letter-spacing: 0.03em;
    --title-color: #757575;
    --main-backround: #FFF;
+   --secondary-background: #2F303A;
+   --third-background: #F5F4FA;
+   --black-color: #000;
+   --blue-color: #2196F3;
    --primary-font: 'Roboto',
       sans-serif;
-   ;
    --secondary-font: 'Raleway',
       sans-serif;
    --conteiner-size: 900px;
@@ -18,21 +21,23 @@ body {
    font-family: var(--primary-font);
    font-size: var(--text-size);
    letter-spacing: var(--letter-spacing);
+   background-color: var(--main-background);
+   font-style: normal;
 }
 
 ul {
    list-style: none;
 }
 
+a {
+   text-decoration: none;
+   font-style: normal;
+}
 
 /* Header */
 .head {
    width: 1600px;
    margin: 0 auto;
-   display: flex;
-   justify-content: center;
-   padding-top: 20px;
-   padding-bottom: 40px;
 }
 
 .nav {
@@ -45,49 +50,38 @@ ul {
 
 .bar {
    display: flex;
-   margin-left: 167px;
 }
-
-
 
 /* WebStudio */
 
 .webstudio,
 .webstudio-foot {
    font-family: var(--secondary-font);
-   font-style: normal;
-   text-decoration: none;
    font-weight: 700;
    font-size: 26px;
    line-height: 1.42;
-   color: #2196F3;
+   color: var(--blue-color);
 }
 
 .studio {
-   color: #000000;
-   margin-right: 70px;
-
+   color: var(--black-color);
 }
 
 .studio1 {
-   color: #FFF;
+   color: var(--main-backround);
 }
-
 
 .link {
    color: var(--main-color);
-   margin-right: 50px;
 }
 
-.link-contact {
+.link-contact,
+.link-contact-footer {
    color: var(--title-color);
-   font-style: normal;
-   margin-left: 40px;
 }
 
 .link,
 .link-contact {
-   text-decoration: none;
    font-size: var(--text-size);
    font-weight: 500;
    line-height: 1.14;
@@ -95,26 +89,25 @@ ul {
 }
 
 .contact {
-   text-decoration: none;
    color: var(--title-color);
 }
 
 
 .current {
-   color: #2196F3;
+   color: var(--blue-color);
 }
 
 .link:hover,
 .link-contact:hover,
+.link-contact-footer:hover,
 .link:focus,
-.link-contact:focus {
-   color: #2196F3;
+.link-contact:focus,
+.link-contact-footer:focus {
+   color: var(--blue-color);
 }
 
-
 .about {
-   background-color: #2F303A;
-   height: 600px;
+   background-color: var(--secondary-background);
 }
 
 .main-title {
@@ -123,7 +116,7 @@ ul {
    font-size: 44px;
    line-height: 1.36;
    letter-spacing: 0.06em;
-   color: #FFFFFF;
+   color: var(--main-backround);
 }
 
 .span {
@@ -140,7 +133,7 @@ ul {
    cursor: pointer;
    font-weight: 700;
    font-size: 16px;
-   background-color: #2196F3;
+   background-color: var(--blue-color);
    color: var(--main-backround);
    padding: 10px 32px;
    border: none;
@@ -151,7 +144,6 @@ ul {
 btn:focus {
    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-
 
 .visually-hidden {
    position: absolute;
@@ -188,7 +180,7 @@ btn:focus {
 }
 
 .our-team {
-   background-color: #F5F4FA;
+   background-color: var(--third-background);
 }
 
 .team-title {
@@ -206,21 +198,17 @@ btn:focus {
 
 .footer {
    background-color: #2F303A;
-   height: 252px;
-   margin-top: 94px;
 }
 
 .address {
-   font-style: normal;
    font-size: var(--text-size);
    line-height: 1.71;
-   color: #FFFFFF;
-   text-decoration: none;
+   color: var(--main-backround);
 }
 
 .btn-portfolio {
    font-family: inherit;
-   background-color: #F5F4FA;
+   background-color: var(--third-background);
    border-radius: 4px;
    border: none;
    padding: 6px 22px;
@@ -240,7 +228,7 @@ btn:focus {
 .btn-portfolio:hover,
 .btn-portfolio:focus {
    color: var(--main-backround);
-   background-color: #2196F3;
+   background-color: var(--blue-color);
    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
       0px 1px 2px rgba(0, 0, 0, 0.08),
       0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -266,10 +254,21 @@ btn:focus {
    margin: 0 auto;
 }
 
+.visually-hidden {
+   position: absolute;
+   width: 1px;
+   height: 1px;
+   margin: -1px;
+   padding: 0;
+   overflow: hidden;
+   border: 0;
+   clip: rect(0 0 0 0);
+}
+
 .work-item {
    width: 370px;
    height: 404px;
-   background: #FFFFFF;
+   background: var(--main-backround);
 }
 
 .work-list {
@@ -282,7 +281,11 @@ btn:focus {
    justify-content: center;
 }
 
-.webstudio-foot {
-   padding-left: 215px;
-   padding-top: 60px;
+.link-contact-footer {
+   font-weight: 400;
+   font-size: var(--text-size);
+   line-height: 1.14;
+   letter-spacing: 0.02em;
 }
+
+.webstudio-foot {}
